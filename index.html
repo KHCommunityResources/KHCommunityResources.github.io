@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KH Community Resources</title>
+    <script src="https://kit.fontawesome.com/0c975230aa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Kennedy House Community Resources</h1>
+            <div class="introTextContainer">
+            <p class="par1">Hey folks! In order to more efficiently serve our clients, the placement students at Kennedy House are putting together a
+            binder of Community Resources to keep at the shelter.</p>
+            <p class="par2">We know that there are tons of amazing community partners offering services that can greatly benefit our youth clients,
+            and we want to collect them all in one place for your convenience!</p>
+            <p class="par3">Please provide as much detail as you can (including names of any contacts you may know at the agency/organization). If
+            you would like to add more than one resource, just click: <span class="buttonExample">Add Resource <span class="fa fa-plus add"></span></span> <br><span class="add">Add as many resources as you would like, and
+            come back anytime to add more as you think of them!</span></p>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <form action="https://formspree.io/f/xzbqdyga" method="POST" class="resourceForm">
+                
+                <div class="fieldsetContainer">
+                    <fieldset class="resource1" id="resourceContainer">
+                        <div class="labelInputContainer resource">
+                            <label for="resource1">Resource Name <span>(required)</span>:</label>
+                            <input type="text" id="resource1" name="resource1" placeholder="e.g. Kennedy House">
+                        </div>
+                        
+                        <div class="labelInputContainer resourceLink">
+                            <label for="resourceLink1" name="resourceLink1">Resource Link:</label>
+                            <input type="text" id="resourceLink1" name="resourceLink1" placeholder="e.g. www.kennedyhouse.org">
+                        </div>
+                        
+                        <div class="labelInputContainer resourceCategory">
+                            <label for="resourceCategory1">Resource Category:</label>
+                            <select id="resourceCategory1" name="resourceCategory1">
+                                <option value disabled selected>Please choose an option</option>
+                                <option value="housing">Housing</option>
+                                <option value="legal">Legal</option>
+                                <option value="immigration">Immigration</option>
+                                <option value="government">Government</option>
+                                <option value="employment">Employment</option>
+                                <option value="health">Health and Mental Health</option>
+                                <option value="education">Education</option>
+                                <option value="arts">Arts and Culture</option>
+                                <option value="religious">Religious and Spiritual</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="labelInputContainer resourceOther">
+                            <label for="other1">If "Other," please suggest a category:</label>
+                            <input type="text" name="other1" id="other1">
+                        </div>
+                        
+                        <div class="labelInputContainer resourceNotes">
+                            <label for="resourceNotes1">Notes:</label>
+                            <input type="text" name="resourceNotes1" id="resourceNotes1" placeholder="e.g. contact info, etc.">
+                            
+                        </div>
+
+                        
+                    </fieldset>
+                </div>
+                    
+                <!-- ADD BUTTON -->
+
+                <div class="addFieldset">
+                    <p>Add Resource <span class="fa fa-plus add"></span></p>
+                </div>
+
+                <div class="formBottomContainer">          
+                    <div class="labelInputContainer email">    
+                        <label for="email">Email <span>(required)</span>:</label>                        
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="labelInputContainer comments">
+                        <label for="comments">Comments:</label>
+                        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <!-- Link to our JavaScript file -->
+    <script src="./scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* GENERAL */
+
+/* colors 
+aqua: #65CDD7
+navy: #004890
+blue: #0060C1
+yellow: #FFCC00
+
+syntax:   color: var(--blue);
+*/
+
+:root {
+    --aqua: #65CDD7;
+    --navy: #004890;
+    --blue: #0060C1;
+    --yellow: #FFCC00
+}
+
+header,
+main,
+div,
+h1,
+p,
+ul,
+li,
+form,
+fieldset,
+input,
+label,
+select,
+textarea,
+button,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-bottom: 20px; */
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 7.5rem;
+    color: var(--navy);
+    text-align: center;
+    border-bottom: 5px solid var(--yellow); 
+    /* width: max-content; */
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+header p {
+    color: black;
+    line-height: 1.5;
+}
+
+.introTextContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.introTextContainer p {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: var(--navy);
+    color: white;
+    width: calc(50% - 20px);
+    flex: 1 1 auto;
+}
+
+.introTextContainer .par1 {
+    margin-right: 10px;
+}
+
+.introTextContainer .par2 {
+    margin-left: 10px;
+}
+
+.introTextContainer .par3 {
+    background-color: var(--aqua);
+    color: #000;
+    line-height: 2;
+}
+
+header .buttonExample {
+    background-color: var(--navy);
+    color: #fff;
+    font-weight: bold;
+    /* display: inline-block; */
+    padding: 10px 0 10px 15px;
+    margin: 2.5px;
+}
+
+header .buttonExample span {
+    color: var(--yellow);
+    padding-right: 15px;
+}
+
+header span {
+    font-weight: bold;
+}
+
+/* MAIN */
+
+
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FORM FIELDSET  */
+
+fieldset {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    border: 2px solid #000;
+}
+
+fieldset .labelInputContainer {
+    margin: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+fieldset input,
+fieldset select,
+fieldset label {
+    width: 50%;
+}
+
+fieldset .labelInputContainer.resource,
+fieldset .labelInputContainer.resourceLink,
+fieldset .labelInputContainer.resourceCategory,
+fieldset .labelInputContainer.resourceOther,
+fieldset .labelInputContainer.resourceNotes {
+    width: calc(50% - 30px);
+}
+
+label span {
+    color: grey;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid var(--aqua);
+}
+
+input[type="text"]::placeholder {
+    font-size: 1.8rem;
+}
+
+select {
+    padding: 5px;
+}
+
+.addFieldset {
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--navy);
+    width: max-content;
+    margin: 10px 0 20px 0;
+    padding: 10px 15px;
+    align-self: flex-end;
+    transition: all 0.3s;
+}
+
+.addFieldset span {
+    color: var(--yellow);
+}
+
+.addFieldset:hover,
+.addFieldset:focus {
+    color: #000;
+    background-color: var(--aqua);
+}
+
+
+.formBottomContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.formBottomContainer label {
+    margin-bottom: 20px;
+}
+
+.labelInputContainer.comments,
+.labelInputContainer.email {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+/* COMMENTS */
+
+.labelInputContainer.comments {
+    margin-left: 15px;
+    width: calc(50% - 15px);
+}
+
+.labelInputContainer.comments textarea {
+    height: 100px;
+}
+
+/* EMAIL */
+
+.labelInputContainer.email {
+    margin-right: 15px;
+    width: calc(50% - 15px);
+}
+
+/* BUTTON */
+
+form button {
+    border-radius: 0;
+    border: none;
+    background-color: var(--aqua);
+    color: #000;
+    font-size: 3rem;
+    font-weight: bold;
+    align-self: center;
+    padding: 15px 15px;
+    width: 50%;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+}
+
+form button:hover,
+form button:focus {
+    background-color: var(--navy);
+    color: white;
+}
+
+/* MEDIA QUERIES  */
+
+/* Portrait tablet and small desktops */
+/* @media (max-width: 940px) {} */
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.8rem;
+    }
+    
+    h1 {
+        font-size: 6rem;
+    }
+
+    input[type="text"]::placeholder {
+        font-size: 1.6rem;
+    }
+
+    fieldset {
+        flex-direction: column;
+    }
+
+    fieldset .labelInputContainer.resource,
+    fieldset .labelInputContainer.resourceLink,
+    fieldset .labelInputContainer.resourceCategory,
+    fieldset .labelInputContainer.resourceOther,
+    fieldset .labelInputContainer.resourceNotes {
+        width: calc(100% - 30px);
+    }
+    
+    .formBottomContainer {
+        flex-direction: column;
+    }
+
+    /* .labelInputContainer.comments,
+    .labelInputContainer.email {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+    } */
+
+    .formBottomContainer label {
+        margin-bottom: 10px;
+    }
+
+    .labelInputContainer.email {
+        margin-right: 0;
+        width: 100%;
+    }
+    .labelInputContainer.comments {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    
+    .introTextContainer {
+        flex-direction: column;
+    }
+
+    .introTextContainer p {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .introTextContainer .par1 {
+        margin-right: 0;
+    }
+
+    .introTextContainer .par2 {
+        margin-left: 0;
+    }
+
+    .introTextContainer .par3 {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .introTextContainer .buttonExample {
+        display: block;
+        width: max-content;
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .addFieldset {
+        align-self: center;
+    }
+
+    form button {
+        font-size: 2.4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
